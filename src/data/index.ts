@@ -1,3 +1,4 @@
+// import { FaHouseUser } from "react-icons/fa";
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -205,13 +206,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    name: "github",
   },
   {
     id: 2,
     img: "/twit.svg",
+    name: "twitter",
   },
   {
     id: 3,
     img: "/link.svg",
+    name: "linkedin",
   },
 ];
