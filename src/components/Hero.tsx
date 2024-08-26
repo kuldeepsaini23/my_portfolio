@@ -5,9 +5,12 @@ import Link from "next/link";
 import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 
-type Props = {};
+type Props = {
+  showButton?: boolean;
+  data: any
+};
 
-const Hero = (props: Props) => {
+const Hero = ({showButton=true,data}: Props) => {
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -38,23 +41,27 @@ const Hero = (props: Props) => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h2 className="uppercase text-xs text-center text-blue-100 max-w-80 tracking-widest">
-            Dynamic Web Magic with Next.js
+            {data?.title}
           </h2>
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concept into Seamless User Experience"
+            words={data?.description}
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi I&apos;m Kuldeep Saini, a developer based in India
+            {data?.bio}
           </p>
           {/* Button */}
-          <Link href={"#about"}>
+          {
+            showButton && (
+              <Link href={"#projects"}>
             <MagicButton 
               title="Show my work" 
               icon={<FaLocationArrow />}
               position="right"
             />
           </Link>
+            )
+          }
         </div>
       </div>
     </div> 

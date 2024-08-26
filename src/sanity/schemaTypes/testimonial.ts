@@ -41,7 +41,7 @@ export default defineType({
 
   preview: {
     select: {
-      title: 'title',
+      title: 'name',
       comapny: 'company',
       media: 'mainImage',
     },

@@ -3,9 +3,11 @@ import React from "react";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import { companies, testimonials } from "@/data";
 
-type Props = {};
+type Props = {
+  data: any;
+};
 
-const Clients = (props: Props) => {
+const Clients = ({data}: Props) => {
   return (
     <div className="py-20" id="testimonials">
       <h1 className="heading">
@@ -14,7 +16,7 @@ const Clients = (props: Props) => {
       {/* Cards */}
       <div className="flex flex-col items-center max-lg:mt-10">
         <InfiniteMovingCards
-          items={testimonials}
+          items={data}
           direction="right"
           speed="slow"
           pauseOnHover={true}

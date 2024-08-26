@@ -53,8 +53,14 @@ export default defineType({
     }),
     defineField({
       name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      type: 'document',
+      fields: [
+        {
+          type: "markdown",
+          description: "The content of the blog post",
+          name: "Blog"
+        }
+      ]
     }),
   ],
 

@@ -13,7 +13,14 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'document',
+      fields: [
+        {
+          type: "markdown",
+          description: "A Github flavored markdown field with image uploading",
+          name: "bio"
+        }
+      ]
     }),
     defineField({
       name: 'icon',

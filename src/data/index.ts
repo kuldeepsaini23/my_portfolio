@@ -1,5 +1,8 @@
 // import { FaHouseUser } from "react-icons/fa";
 export const navItems = [
+  
+  { name: "Home", link: "/" },
+  { name: "Blog", link: "/Blogs" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
